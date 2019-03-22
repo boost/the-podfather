@@ -1,8 +1,8 @@
-import FetchPodDetails from '@/services/fetch-pod-details'
+import FetchPodDetails from '@/services/fetch-pod-details.service.js'
 
 describe('FetchPodDetails', () => {
   it('can be initialised with the pod name', () => {
-    expect(new FetchPodDetails('pod-name')).not.toThrow()
+    expect(new FetchPodDetails('pod-name').podName).toBe('pod-name')
   })
 
   it('fetch pod memory limit in Gb', () => {
